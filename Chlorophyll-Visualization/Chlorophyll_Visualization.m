@@ -85,7 +85,7 @@ for k=1:11:14
     chl4(:,:,l)=nanmean(CHLL(:,:,(k+8):(k+10)),3);%ÏÄ¼¾
     l=l+1;
 end
-%% ¶¬¼¾
+%% ¶¬¼¾ Winter
 chl_win(:,:,:)=nanmean(chl1(:,:,:),3);
 m_proj('Equidistant Cylindrical','lat',[lat_min lat_max],'lon',[lon_min lon_max]);
 hold on;
@@ -97,7 +97,7 @@ m_coast('linewidth',1,'color','k');
 m_coast('patch',[0.783,0.741,0.721]);
 m_grid('linestyle','none','box','fancy');
 gtext('(mg/m^{3})');
-%% ´º¼¾
+%% ´º¼¾ Spring
 chl_spr(:,:,:)=nanmean(chl2(:,:,:),3);
 m_proj('Equidistant Cylindrical','lat',[lat_min lat_max],'lon',[lon_min lon_max]);
 hold on;
@@ -109,7 +109,7 @@ m_coast('linewidth',1,'color','k');
 m_coast('patch',[0.783,0.741,0.721]);
 m_grid('linestyle','none','box','fancy');
 gtext('(mg/m^{3})');
-%% Çï¼¾
+%% Çï¼¾ Autumn
 chl_aut(:,:,:)=nanmean(chl3(:,:,:),3);
 m_proj('Equidistant Cylindrical','lat',[lat_min lat_max],'lon',[lon_min lon_max]);
 hold on;
@@ -121,7 +121,7 @@ m_coast('linewidth',1,'color','k');
 m_coast('patch',[0.783,0.741,0.721]);
 m_grid('linestyle','none','box','fancy');
 gtext('(mg/m^{3})');
-%% ÏÄ¼¾
+%% ÏÄ¼¾ Summer
 chl_sum(:,:,:)=nanmean(chl4(:,:,:),3);
 m_proj('Equidistant Cylindrical','lat',[lat_min lat_max],'lon',[lon_min lon_max]);
 hold on;
@@ -133,6 +133,3 @@ m_coast('linewidth',1,'color','k');
 m_coast('patch',[0.783,0.741,0.721]);
 m_grid('linestyle','none','box','fancy');
 gtext('(mg/m^{3})');
-
-
- 
